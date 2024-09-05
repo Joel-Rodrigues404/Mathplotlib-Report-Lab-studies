@@ -15,5 +15,4 @@ plt.plot(names, values)
 plt.suptitle('Categorical Plotting')
 
 plt.savefig(os.path.join('charts', "subplots.png"), dpi=300)
-
 plt.show()

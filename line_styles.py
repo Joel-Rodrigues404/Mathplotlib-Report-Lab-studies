@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 linestyle_str = [
     ("solid", "solid"),  # Same as (0, ()) or '-'
@@ -42,8 +43,6 @@ def plot_linestyles(ax, linestyles, title):
     ax.tick_params(left=False, bottom=False, labelbottom=False)
     ax.spines[:].set_visible(False)
 
-    # For each line style, add a text annotation with a small offset from
-    # the reference point (0 in Axes coords, y tick value in Data coords).
     for i, (name, linestyle) in enumerate(linestyles):
         ax.annotate(
             repr(linestyle),
@@ -56,12 +55,16 @@ def plot_linestyles(ax, linestyles, title):
             ha="right",
             family="monospace",
         )
+    
+    return plt
 
 
 fig, (ax0, ax1) = plt.subplots(2, 1, figsize=(10, 8), height_ratios=[1, 3])
 
-plot_linestyles(ax0, linestyle_str[::-1], title="Named linestyles")
-plot_linestyles(ax1, linestyle_tuple[::-1], title="Parametrized linestyles")
+data = plot_linestyles(ax0, linestyle_str[::-1], title="Named linestyles")
+data = plot_linestyles(ax1, linestyle_tuple[::-1], title="Parametrized linestyles")
 
-plt.tight_layout()
-plt.show()
+data.tight_layout()
+
+data.show()
+data.savefig(os.path.join('charts', "line_styles.png"), dpi=300)

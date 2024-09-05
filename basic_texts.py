@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import os
 
 fig = plt.figure()
 ax = fig.add_subplot()
@@ -30,4 +31,5 @@ ax.plot([2], [1], 'o')
 ax.annotate('annotate', xy=(2, 1), xytext=(3, 4),
             arrowprops=dict(facecolor='black', shrink=0.05))
 
+plt.savefig(os.path.join('charts', "basic_texts.png"), dpi=300)
 plt.show()
