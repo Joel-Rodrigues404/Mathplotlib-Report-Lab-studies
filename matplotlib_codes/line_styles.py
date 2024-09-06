@@ -66,5 +66,5 @@ data = plot_linestyles(ax1, linestyle_tuple[::-1], title="Parametrized linestyle
 
 data.tight_layout()
 
-data.show()
 data.savefig(os.path.join('charts', "line_styles.png"), dpi=300)
+data.show()
