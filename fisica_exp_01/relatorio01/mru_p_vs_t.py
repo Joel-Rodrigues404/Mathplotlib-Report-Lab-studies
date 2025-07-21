@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 # Dados MRU
 tempos_mru = np.array([0.222, 0.446, 0.893, 1.344])
 posicoes_mru = np.array([0.450, 0.550, 0.750, 0.950])

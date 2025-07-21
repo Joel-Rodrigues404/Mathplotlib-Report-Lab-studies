@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Dados da tabela (extraídos do DOCX)
+
 # 1. Amplitude vs Período
 A_deg = np.array([10, 15, 20, 25, 30], dtype=float)
 T_A = np.array([1.559, 1.556, 1.552, 1.555, 1.558], dtype=float)
@@ -29,7 +29,6 @@ plt.ylabel('Período T (s)')
 plt.title('Gráfico A x T')
 plt.legend()
 plt.tight_layout()
-# plt.savefig('/mnt/data/grafico_A_T_sem_grade.png')
 
 # ------------------ Gráfico T x L ------------------
 plt.figure()
@@ -40,7 +39,6 @@ plt.ylabel('Período T (s)')
 plt.title('Gráfico T x L')
 plt.legend()
 plt.tight_layout()
-# plt.savefig('/mnt/data/grafico_T_L_sem_grade.png')
 
 # ------------------ Gráfico T² x L ------------------
 plt.figure()
@@ -51,6 +49,5 @@ plt.ylabel('Período T² (s²)')
 plt.title('Gráfico T² x L')
 plt.legend()
 plt.tight_layout()
-# plt.savefig('/mnt/data/grafico_T2_L_sem_grade.png')
 
 plt.show()
